@@ -12,17 +12,7 @@ class ContactsController < ApplicationController
       body = params[:contact][:comment]
       ContactMailer.contact_email(name, email, body)
 
-
       flash[:success] = 'Message sent.'
-      redirect_to new_contact_path
-    elsif contact_params[:name] == ""
-      flash[:danger] = "Input your name"
-      redirect_to new_contact_path
-    elsif contact_params[:email] == ""
-      flash[:danger] = "Input your email"
-      redirect_to new_contact_path
-    elsif contact_params[:comment] == ""
-      flash[:danger] = "Input your comments"
       redirect_to new_contact_path
     else
       flash[:danger] = "Error occured when sending a message"

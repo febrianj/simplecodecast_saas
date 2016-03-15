@@ -18,6 +18,7 @@ class ContactsController < ApplicationController
       flash.now[:danger] = @message
       redirect_to new_contact_path
     end
+    
   end
 
   private

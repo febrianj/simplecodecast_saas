@@ -7,19 +7,10 @@ class ContactsController < ApplicationController
   	@contact = Contact.new(contact_params)
     
     if @contact.save
-      flash[:success] = 'Message sent.'
-      redirect_to new_contact_path
-    elsif contact_params[:name] == ""
-      flash[:danger] = "Input your name"
-      redirect_to new_contact_path
-    elsif contact_params[:email] == ""
-      flash[:danger] = "Input your email"
-      redirect_to new_contact_path
-    elsif contact_params[:comment] == ""
-      flash[:danger] = "Input your comments"
+      flash[:success] = "Message sent."
       redirect_to new_contact_path
     else
-      flash[:danger] = "Error occured when sending a message"
+      flash[:danger] = "Error occured when sending a message" + contact_params.to_s
       redirect_to new_contact_path
     end
   end

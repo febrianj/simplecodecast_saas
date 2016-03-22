@@ -41,6 +41,8 @@ gem 'devise', '~> 3.5.6'
 gem 'stripe', '~> 1.36'
 # Use figaro to hide secret keys
 gem 'figaro', '1.1.1'
+# Use paperclip for image upload
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

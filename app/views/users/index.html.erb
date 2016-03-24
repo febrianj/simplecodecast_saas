@@ -8,7 +8,8 @@
 							<%= link_to user do %> <%= image_tag user.profile.avatar.url(:thumb), class: 'profile-avatar-index' if user.profile.avatar.file? %> <% end %>
 						</div>
 						<div>
-							<%= link_to user do %> <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2> <% end %>
+							<h2> <%= link_to user do %> <%= user.profile.first_name %> <%= user.profile.last_name %> <% end %> 
+							<% if user.plan_id == 2 %> <span class="label label-danger">Pro</span> <% end %> </h2> 
 							<p><%= user.profile.description %></p>
 						</div>
 					</li>

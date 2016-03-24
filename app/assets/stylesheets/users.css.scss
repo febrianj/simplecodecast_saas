@@ -1,0 +1,37 @@
+/* User Show css */
+.job-icon {
+  display: inline-block;
+  color: white;	
+  width: 30px;
+  height: 30px;
+  border: 1px solid #2e6da4;
+  border-radius: 5px;
+  background-color: #337ab7;
+}
+
+.well.profile-block {
+  color: #fff;
+  h3 {
+    margin: 0;
+  }
+}
+
+.well.description {  
+  background-color: #449d44;
+  border-color: #398439;
+}
+
+.well.contact-info {
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+
+/* User Index css */
+.profile-avatar-index {
+  border-radius: 50%;
+}
+
+/* global css */
+.white-bg {
+	background-color:  #fff;
+}

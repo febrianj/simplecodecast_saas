@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<ul class='list-unstyled'>
+			<% @users.each do |user| %>
+				<% if user.profile %>
+					<li class="profile-index row well <%= cycle('white-bg', '') %> text-center">
+						<div class="col-sm-4">
+							<%= link_to user do %> <%= image_tag user.profile.avatar.url(:thumb), class: 'profile-avatar-index' if user.profile.avatar.file? %> <% end %>
+						</div>
+						<div>
+							<%= link_to user do %> <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2> <% end %>
+							<p><%= user.profile.description %></p>
+						</div>
+					</li>
+				<% end %>
+			<% end %>
+		</ul>
+	</div>
+</div>
